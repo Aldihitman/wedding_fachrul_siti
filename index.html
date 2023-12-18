@@ -43,6 +43,8 @@
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 
+	<!-- leaf animate -->
+<link rel="stylesheet" href="css/leaf.css">
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
 
@@ -58,6 +60,7 @@
 </head>
 
 <body>
+
 
 	<div class="fh5co-loader"></div>
 
@@ -93,20 +96,20 @@
 								<div class="countdown" data-count="2024/01/06">
 									<div class="row text-center">
 										<div class="dot pulse animated infinite" style="">
-											<h2 class="" >%d <br>Days</h2>
-											
+											<h2 class="">%d <br>Days</h2>
+
 										</div>
 										<div class="dot pulse animated infinite" style="">
 											<h2 class="">%h <br>Hours</h2>
-											
+
 										</div>
 										<div class="dot pulse animated infinite" style="">
 											<h2 class="">%m <br>Minutes</h2>
-											
+
 										</div>
 										<div class="dot pulse animated infinite" style="">
 											<h2 class="">%s <br>Seconds</h2>
-											
+
 										</div>
 									</div>
 								</div>
@@ -122,6 +125,7 @@
 		<div id="pasangan">
 			<div class="container">
 				<div class="row">
+					
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box"
 						style="margin-top: 60px;">
 						<h2 style="color: rgb(228, 193, 140);">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْم</h2>
@@ -420,7 +424,7 @@
 								</div>
 							</div>
 							<div class="col-md-4 col-sm-4">
-								<button type="submit" class="btn btn-default btn-block">Kirim ucapan dan do'a</button>
+								<button type="submit" class="btn btn-default btn-block" onclick="convertToWhatsApp()">Kirim ucapan dan do'a</button>
 							</div>
 						</form>
 					</div>
@@ -481,6 +485,8 @@
 	<script src="js/main.js"></script>
 	<!-- Countdown patch2 -->
 	<script src="js/Countdown.js"></script>
+	<!-- ucapan -->
+	<script src="komen/komen.js"></script>
 
 	<script>
 		var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
