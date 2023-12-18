@@ -44,7 +44,7 @@
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 
 	<!-- leaf animate -->
-<link rel="stylesheet" href="css/leaf.css">
+	<link rel="stylesheet" href="css/leaf.css">
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
 
@@ -125,7 +125,7 @@
 		<div id="pasangan">
 			<div class="container">
 				<div class="row">
-					
+
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box"
 						style="margin-top: 60px;">
 						<h2 style="color: rgb(228, 193, 140);">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْم</h2>
@@ -424,7 +424,8 @@
 								</div>
 							</div>
 							<div class="col-md-4 col-sm-4">
-								<button type="submit" class="btn btn-default btn-block" onclick="convertToWhatsApp()">Kirim ucapan dan do'a</button>
+								<button onclick="convertToWhatsApp()" class="btn btn-default btn-block"
+									>Kirim ucapan dan do'a</button>
 							</div>
 						</form>
 					</div>
@@ -485,26 +486,17 @@
 	<script src="js/main.js"></script>
 	<!-- Countdown patch2 -->
 	<script src="js/Countdown.js"></script>
-	<!-- ucapan -->
-	<script src="komen/komen.js"></script>
+
 
 	<script>
-		var d = new Date(new Date().getTime() + 200 * 120 * 120 * 2000);
-
-		// default example
-		simplyCountdown('.simply-countdown-one', {
-			year: d.getFullYear(),
-			month: d.getMonth() + 1,
-			day: d.getDate()
-		});
-
-		//jQuery example
-		$('#simply-countdown-losange').simplyCountdown({
-			year: d.getFullYear(),
-			month: d.getMonth() + 1,
-			day: d.getDate(),
-			enableUtc: false
-		});
+		function convertToWhatsApp() {
+			var name = document.getElementById('name').value;
+			var comment = document.getElementById('ucapan').value;
+			var phoneNumber = '0877'; // Ganti dengan nomor telepon tujuan Anda
+			var message = 'Nama: ' + name + '\nUcapan: ' + comment;
+			var whatsappLink = 'https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=' + encodeURIComponent(message);
+			window.location.href = whatsappLink;
+		}
 	</script>
 
 </body>
