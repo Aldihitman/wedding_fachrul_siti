@@ -52,11 +52,6 @@
 </head>
 
 <body>
-
-	<audio id="musicPlayer" loop autoplay>
-        <source src="audio.mp3" type="audio/mp3">
-        Your browser does not support the audio element.
-    </audio>
 	<div class="fh5co-loader"></div>
 
 	<div id="page">
@@ -194,7 +189,10 @@
 											<!-- <p><a href="https://maps.app.goo.gl/4Z1D4ifYJYtAANmU8" target="_blank" class="btn btn-default btn-sm">Lokasi</a></p> -->
 										</div>
 										<div>
-											<a href="https://www.google.com/maps/place/W7FX%2BVVJ+Warung+pa+hj+emul,+Bolang,+Kec.+Tirtajaya,+Karawang,+Jawa+Barat+41357/@-6.075288,107.299641,15z/data=!4m6!3m5!1s0x2e6bd59e0bfa9809:0x2dd61b7c0dae244!8m2!3d-6.0752881!4d107.2996413!16s%2Fg%2F11lfglkp5l?hl=id&gl=ID" target="_blank" rel="noopener noreferrer" class="btn btn-outline " style="margin-top: 9px; color: white; background-color: #e4c18c;">Lihat Maps</a>
+											<a href="https://www.google.com/maps/place/W7FX%2BVVJ+Warung+pa+hj+emul,+Bolang,+Kec.+Tirtajaya,+Karawang,+Jawa+Barat+41357/@-6.075288,107.299641,15z/data=!4m6!3m5!1s0x2e6bd59e0bfa9809:0x2dd61b7c0dae244!8m2!3d-6.0752881!4d107.2996413!16s%2Fg%2F11lfglkp5l?hl=id&gl=ID"
+												target="_blank" rel="noopener noreferrer" class="btn btn-outline "
+												style="margin-top: 9px; color: white; background-color: #e4c18c;">Lihat
+												Maps</a>
 										</div>
 										<p style="padding-top: 10px;">Kesan yang dalam akan berakhir di hati kami
 											apabila Bapak/Ibu/Saudara/i berkenan hadir memberikan do'a restu kepada
@@ -267,7 +265,8 @@
 					<div class="display-t">
 						<div class="display-tc">
 							<div class="kotak animate-box">
-								<h2 style="font-family: Sacramento; font-size: 40px; font-weight: bold; color: white;" class="">Kirim Hadiah</h2>
+								<h2 style="font-family: Sacramento; font-size: 40px; font-weight: bold; color: white;"
+									class="">Kirim Hadiah</h2>
 								<img class="tableTo our couple-bordered img-rounded"
 									src="https://a.m.dana.id/danaweb/web/dana-meta-logo.png" alt="" srcset=""
 									width="200px">
@@ -299,7 +298,12 @@
 											</figure>
 											<span>Fachrul Fauzi</span>
 											<blockquote>
-												<p>"Just like men, women also have flaws, and they long for unconditional love. They know that they are not perfect, and sometimes, they are afraid that their boyfriend will leave them because of their flaws. However, they expect to be loved without any conditions. No matter how they look or what career they have, they need someone who will love them sincerely."</p>
+												<p>"Just like men, women also have flaws, and they long for
+													unconditional love. They know that they are not perfect, and
+													sometimes, they are afraid that their boyfriend will leave them
+													because of their flaws. However, they expect to be loved without any
+													conditions. No matter how they look or what career they have, they
+													need someone who will love them sincerely."</p>
 											</blockquote>
 										</div>
 									</div>
@@ -310,7 +314,14 @@
 											</figure>
 											<span>Siti Nurlela</span>
 											<blockquote>
-												<p>"In connection with unconditional love, girls need security in a relationship. Many women feel insecure about themselves quickly. Whenever they think that their girlfriend is interested in someone else, they feel that they are no longer attractive. There are also times when they feel bad about themselves because they think they are not good enough. Many women tend to think too much and become paranoid. They need a partner who can help them get rid of this feeling of discomfort."</p>
+												<p>"In connection with unconditional love, girls need security in a
+													relationship. Many women feel insecure about themselves quickly.
+													Whenever they think that their girlfriend is interested in someone
+													else, they feel that they are no longer attractive. There are also
+													times when they feel bad about themselves because they think they
+													are not good enough. Many women tend to think too much and become
+													paranoid. They need a partner who can help them get rid of this
+													feeling of discomfort."</p>
 											</blockquote>
 										</div>
 									</div>
@@ -378,6 +389,17 @@
 
 
 	<script>
+		var source = "audio.mp3"
+		var audio = document.createElement("audio");
+		//
+		audio.autoplay = true;
+		//
+		audio.load()
+		audio.addEventListener("load", function () {
+			audio.play();
+		}, true);
+		audio.src = source;
+
 		function convertToWhatsApp() {
 			var name = document.getElementById('name').value;
 			var comment = document.getElementById('ucapan').value;
