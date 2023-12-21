@@ -1,0 +1,27 @@
+<audio autoplay>
+	<source src="audio.mp3" type="audio/mp3">
+</audio>
+
+
+
+<script>
+    var source = "audio.mp3"
+    var audio = document.createElement("audio");
+    //
+    audio.autoplay = true;
+    //
+    audio.load()
+    audio.addEventListener("load", function () {
+        audio.play();
+    }, true);
+    audio.src = source;
+
+    function convertToWhatsApp() {
+        var name = document.getElementById('name').value;
+        var comment = document.getElementById('ucapan').value;
+        var phoneNumber = '0877'; // Ganti dengan nomor telepon tujuan Anda
+        var message = 'Nama: ' + name + '\nUcapan: ' + comment;
+        var whatsappLink = 'https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=' + encodeURIComponent(message);
+        window.location.href = whatsappLink;
+    }
+</script>
